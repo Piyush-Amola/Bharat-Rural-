@@ -1,0 +1,98 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crop Price Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <!-- Stats -->
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div class="bg-white p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold">Total States</h3>
+          <p id="totalStates" class="text-2xl font-bold mt-2"></p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold">Total Districts</h3>
+          <p id="totalDistricts" class="text-2xl font-bold mt-2"></p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold">Total Markets</h3>
+          <p id="totalMarkets" class="text-2xl font-bold mt-2"></p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold">Total Crops</h3>
+          <p id="totalCrops" class="text-2xl font-bold mt-2"></p>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-6">
+        <select
+          id="stateSelect"
+          class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500"
+        >
+          <option value="">-- Select State --</option>
+        </select>
+        <select
+          id="districtSelect"
+          class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500"
+        >
+          <option value="">-- Select District --</option>
+        </select>
+        <select
+          id="marketSelect"
+          class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500"
+        >
+          <option value="">-- Select Market --</option>
+        </select>
+        <select
+          id="cropSelect"
+          class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-green-500"
+        >
+          <option value="">-- Select Crop --</option>
+        </select>
+      </div>
+
+      <button
+        id="filterBtn"
+        class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 mb-6"
+      >
+        Show Prices
+      </button>
+
+      <!-- Price Table -->
+      <div class="overflow-x-auto">
+        <table
+          class="w-full table-auto border-collapse border border-gray-300 text-left"
+        >
+          <thead class="bg-green-100">
+            <tr>
+              <th class="border px-2 py-1">State</th>
+              <th class="border px-2 py-1">District</th>
+              <th class="border px-2 py-1">Market</th>
+              <th class="border px-2 py-1">Crop</th>
+              <th class="border px-2 py-1">Min Price</th>
+              <th class="border px-2 py-1">Max Price</th>
+              <th class="border px-2 py-1">Modal Price</th>
+              <th class="border px-2 py-1">Arrival Qty</th>
+              <th class="border px-2 py-1">Date</th>
+            </tr>
+          </thead>
+          <tbody id="priceTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="js/script.js"></script>
+    <script src="js/crop.js"></script>
+  </body>
+</html>

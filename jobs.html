@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bharat Rural AI - Jobs</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Header & Footer Loader -->
+    <script defer src="js/script.js"></script>
+  </head>
+
+  <body class="bg-gray-100">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Jobs Section -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+      <!-- Title -->
+      <h2 class="text-3xl font-bold text-center text-green-800 mb-8">
+        💼 Rural & Remote Job Opportunities
+      </h2>
+
+      <!-- Search Bar -->
+      <div class="mb-8 flex justify-center">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search job, company, or location..."
+          class="w-full md:w-1/2 px-4 py-3 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-600"
+        />
+      </div>
+
+      <!-- Job Cards Container -->
+      <div id="jobContainer" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Jobs will be loaded here dynamically -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Job Fetch Script -->
+    <script src="js/job.js"></script>
+  </body>
+</html>
